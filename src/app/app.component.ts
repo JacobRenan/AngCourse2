@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+  <app-forms></app-forms>
+  <!--app-food-add></app-food-add>
+  <app-food-list></app-food-list-->
+  <router-outlet></router-outlet>`
 })
-export class AppComponent {
-  title = 'Aula9';
+export class AppComponent implements OnInit {
+  
+  constructor() {}
+  
+  ngOnInit(): void {
+    
+  }
+
 }

@@ -1,0 +1,51 @@
+<form #form="ngForm">
+    <label>
+        Nome:
+        <input type="text" name="nome" ngModel>
+
+    </label>
+
+<br>
+<br>
+
+    <label>
+        Masculino:
+        <input type="radio" name="sexo" value="Masculino" ngModel>
+    </label>
+
+<br>
+
+    <label>
+        Feminino:
+        <input type="radio" name="sexo" value= "Feminino" ngModel>
+    </label>
+<br>
+<br>
+
+<label>
+    Angular:
+    <input type="checkbox" name="Angular" ngModel>
+</label>
+
+<br>
+
+<label>
+    React:
+    <input type="checkbox" name="React" ngModel>
+</label>
+
+<br>
+<br>
+
+<select name="alimento" ngModel>
+    <option value="">Selecione uma comida</option>
+    <option *ngFor="let item of listComidas" [ngValue]="item">
+        {{item.comida}} - {{item.preco}}
+    </option>
+</select>
+
+</form>
+
+<br><br>
+
+{{form.value | json}}
